@@ -1,0 +1,95 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coffee House - Your favorite place for coffee and relaxation.">
+    <meta name="keywords" content="coffee, cafe, coffee house, drinks, snacks, relaxation">
+    <meta name="author" content="Coffee House Team">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="your-google-site-verification-code">
+    <link rel="icon" href="{% static '/images/png/favicon.png.png' %}" type="image/png">
+    <title>{% block title %}Coffee House{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/logout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>  
+    <div class="header-content d-flex justify-content-center align-items-center text-center">
+        <p>10% Discount for Subscription!</p>
+    </div>
+    <header>
+        <nav>
+            <div class="logo d-flex align-items-center ml-5">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'images/png/Coffee-House-Logo-Vector.svg-.png' %}" alt="Coffee House Logo" width="100" height="100">
+                </a>
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Shop <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="{% url 'home' %}">About CoffeeHouse</a></li>
+                <li><a href="{% url 'home' %}">Blog</a></li>
+                <li><a href="{% url 'home' %}">Gallery</a></li>
+                <li><a href="{% url 'home' %}">Cart</a></li>
+                <li><a href="{% url 'home' %}">Contact</a></li>
+
+                
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'user-logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'user-login' %}">Login</a></li>
+                    <li><a href="{% url 'user-register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+            <div class="cart-icon ml-auto mr-5">
+                <ul>
+                    <li><a href="{% url 'home' %}"><i class="fas fa-user"></i></a></li>
+                    <li><a href="{% url 'home' %}"><i class="fas fa-heart"></i></a></li>
+                    <li><a href="{% url 'home' %}"><i class="fas fa-search"></i></a></li>
+                    <li><a href="{% url 'home' %}"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times" style="display: none;"></i>
+            </div>
+            <script>
+                
+            </script>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Page-specific content will go here -->
+        <div id="api-data">
+            <!-- API data will be dynamically loaded here -->
+        </div>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Coffee House. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

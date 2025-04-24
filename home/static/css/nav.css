@@ -1,0 +1,141 @@
+/* Header styling */
+header {
+    background: linear-gradient(135deg, #766859 0%, #4b4038 100%);
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    z-index: 1000;
+}
+
+nav h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    font-family: "Monotype Corsiva", "Lucida Handwriting", "Comic Sans MS", cursive;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #2c2922;
+}
+/* Navigation link active state */
+nav ul li a.active {
+    color: #e6d5b8;
+    font-weight: 700;
+}
+/* cart icon styling*/
+nav ul li a .fa-shopping-cart {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+/* Cart icon hover effect */
+nav ul li a:hover .fa-shopping-cart {
+    color: #151514;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    nav h1 {
+        font-size: 1.8rem;
+    }
+    .menu-toggle {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+    }
+}
+
+/* header content styling*/
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: .6rem;
+    background-color: #f7f4ef;
+}
+.header-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #3c2f2f;
+    margin-bottom: 1rem;
+}
+.header-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #3c2f2f;
+    margin-bottom: .5rem;
+}
+.header-content a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: #8b5e3c; /* Button color */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}

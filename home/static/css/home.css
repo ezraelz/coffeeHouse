@@ -1,0 +1,252 @@
+/* Styles for the Home Component */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #e1d6c3;
+    background: url(../images/pngtree-an-industrial-styled-coffee-shop-picture-image_2690167.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+.home-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+}
+.home-container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+    z-index: 1; /* Ensure the text is above the background */
+}
+.home-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    z-index: 1; /* Ensure the text is above the background */
+}
+.home-container a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: #8b5e3c; /* Button color */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Ensure the button is above the background */
+}
+.home-container a:hover {
+    background-color: #6b4e31; /* Button hover color */
+}
+.home-container a:active {
+    background-color: #6b4e31; /* Button active color */
+}
+.home-container a:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 4px rgba(139, 94, 60, 0.5); /* Custom focus outline */
+}
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .home-container{
+        margin: 0 auto;
+    }
+    .home-container h1 {
+        font-size: 2.5rem;
+    }
+    .home-container p {
+        font-size: 1.2rem;
+    }
+    .home-container a {
+        font-size: 1.2rem;
+    }
+}
+
+/* home contents styling */
+.home-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    width: 100%;
+    height: auto;
+    margin: 0rem auto;
+    padding: 0rem;
+    background-color: #f7efe4;
+}
+.home-contents h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: #3c2f2f;
+    margin-bottom: 1rem;
+}
+.home-contents p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #3c2f2f;
+    margin-bottom: .5rem;
+}
+.home-contents a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: #8b5e3c; /* Button color */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+/* coffee cards styling */
+.coffee-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: auto;
+}
+.coffee-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    image-resolution: from-image;
+    object-fit: cover;
+    width: 65vh;
+    height: auto;
+    transition: transform 0.3s ease; /* Animation on hover */
+}
+.coffee-card-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    image-resolution: from-image;
+    object-fit: cover;
+    width: 65vh;
+    height: 70vh;
+    padding: 2rem;
+}
+.coffee-card:nth-child(1) .coffee-card-img {
+    background: linear-gradient(27%, #6f4e37, #c0a98e
+    ); /* Mocha to Cappuccino Foam */
+}
+
+.coffee-card:nth-child(2) .coffee-card-img {
+    background: linear-gradient(
+        to bottom, #4b2e22, #d6b48c
+    ); /* Espresso to Caramel */
+}
+
+.coffee-card:nth-child(3) .coffee-card-img {
+    background: linear-gradient(
+        to bottom, #36241a, #b98e68
+    ); /* Dark Roast to Latte Cream */
+}
+
+.coffee-card img {
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
+    background: transparent;
+}
+.coffee-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #3c2f2f;
+    margin-bottom: 1rem;
+}
+.coffee-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #3c2f2f;
+    margin-bottom: .5rem;
+}
+.coffee-card a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    background-color: #8b5e3c; /* Button color */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.coffee-card a:hover {
+    background-color: #6b4e31; /* Button hover color */
+}
+.coffee-card a:active {
+    background-color: #6b4e31; /* Button active color */
+}
+/* coffee images styling */
+.coffee-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: auto;
+}
+.coffee-images img:hover {
+    transform: scale(1.05);
+}
+/* Responsive design for coffee images */
+@media (max-width: 768px) {
+    .coffee-images img {
+        width: 100%;
+        height: auto;
+    }
+}
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .home-container h1 {
+        font-size: 2.5rem;
+    }
+    .home-container p {
+        font-size: 1.2rem;
+    }
+    .home-container a {
+        font-size: 1.2rem;
+    }
+}
+/* Responsive design for coffee images */
+@media (max-width: 768px) {
+    .coffee-images img {
+        width: 100%;
+        height: auto;
+    }
+}
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .home-container h1 {
+        font-size: 2.5rem;
+    }
+    .home-container p {
+        font-size: 1.2rem;
+    }
+    .home-container a {
+        font-size: 1.2rem;
+    }
+}
+/* Responsive design for coffee images */
+@media (max-width: 768px) {
+    .coffee-images img {
+        width: 100%;
+        height: auto;
+    }
+}
+/* Responsive design for smaller screens */

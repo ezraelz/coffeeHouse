@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home - CoffeeHouse{% endblock %}
+
+{% block content %}
+<div class="home-container d-flex flex-row justify-content-center align-items-center text-center">
+    <div class="home-description d-flex flex-column justify-content-center align-items-center text-center ">
+        <h1>Welcome to CoffeeHouse</h1>
+        <p>Your favorite place for coffee and relaxation.</p>
+    </div>
+    <div class="home-img z-index-2">
+        <img src="{% static 'images/png/coffee12.png' %}" alt="Coffee House Logo" class="logo">
+    </div>
+</div>
+<div class='home-contents'>
+    <div class="home-content">
+        <h1>Our Coffees</h1>
+        <div class="coffee-images">
+            <div class="coffee-card">
+                <div class='coffee-card-img'>
+                    <img src="{% static 'images/png/coffee12.png' %}" alt="Coffee 1" class="coffee-image">
+                </div>
+                <p>Cappuccino Foam</p>
+                <span class="coffee-price">Price: $5.00</span>
+            </div>
+            <div class="coffee-card">
+                <div class='coffee-card-img'>
+                    <img src="{% static 'images/png/coffee2.png' %}" alt="Coffee 1" class="coffee-image">
+                </div>
+                <p>Espresso</p>
+                <span class="coffee-price">Price: $4.00</span>
+            </div>
+            <div class="coffee-card">
+                <div class='coffee-card-img'>
+                    <img src="{% static 'images/png/coffee13.png' %}" alt="Coffee 1" class="coffee-image">
+                </div>
+                <p>Latte Cream</p>
+                <span class="coffee-price">Price: $6.00</span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="api-data-container">
+    <h2>API Data</h2>
+    <div id="api-data">
+        <!-- API data will be dynamically loaded here -->
+    </div>
+{% endblock %}
